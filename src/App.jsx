@@ -5,9 +5,7 @@ import CategoryFilter from './components/CategoryFilter.jsx'
 import ProductGrid from './components/ProductGrid.jsx'
 import './App.css'
 
-// Convert Google Sheets share URL → public CSV export URL
-const SHEET_ID = '16EY-a3XlrUch1U2JRr49bmZqWprXacKmbivxNLLeSpY'
-const CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=0`
+const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRtDQeMyV3bGOOQpTrQ2CAmVMCVCVI5hqPUEIymAH2Xuw3cCUibUYL7DtiHtdDvmd6F3qj3KAoRmKAc/pub?output=csv'
 
 export default function App() {
   const [products, setProducts] = useState([])
