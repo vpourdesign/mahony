@@ -23,12 +23,13 @@ export default function App() {
       complete: (results) => {
         const rows = results.data
           .map((row) => ({
-            nom: row['nom'] || row['name'] || '',
+            nom: row['nom_produit'] || row['nom'] || row['name'] || '',
             description: row['description'] || '',
             categorie: (row['catégorie'] || row['categorie'] || row['category'] || '').trim(),
-            image: row['image'] || row['image url'] || row['imageurl'] || row['photo'] || '',
+            image: row['lien_image'] || row['image'] || row['image url'] || row['imageurl'] || row['photo'] || '',
+            statut: (row['statut'] || 'actif').trim().toLowerCase(),
           }))
-          .filter((r) => r.nom)
+          .filter((r) => r.nom && r.statut !== 'brouillon')
         setProducts(rows)
         setLoading(false)
       },
