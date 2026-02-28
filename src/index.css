@@ -5,29 +5,27 @@
 }
 
 :root {
-  --blue: #0082c3;
-  --blue-dark: #005f94;
-  --blue-light: #e6f4fb;
-  --gray-100: #f5f7fa;
-  --gray-200: #e8edf2;
-  --gray-400: #9aa5b4;
-  --gray-600: #4a5568;
-  --gray-800: #1a202c;
+  --bg: #0e0e0e;
+  --surface: #161616;
+  --gold: #c9a96e;
+  --gold-light: #e8d5b0;
+  --cream: #f5f0e8;
+  --muted: #3a3832;
+  --muted-light: #7a7670;
   --white: #ffffff;
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.05);
-  --shadow-md: 0 4px 16px rgba(0,0,0,0.10);
-  --shadow-lg: 0 8px 32px rgba(0,0,0,0.13);
-  --radius: 12px;
-  --radius-sm: 8px;
-  --transition: 0.2s ease;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --transition: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-fast: 0.2s ease;
 }
 
 html {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-sans);
   font-size: 16px;
-  color: var(--gray-800);
-  background: var(--gray-100);
+  color: var(--cream);
+  background: var(--bg);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {

@@ -1,16 +1,17 @@
 .header {
-  background: var(--white);
-  border-bottom: 3px solid var(--blue);
-  box-shadow: var(--shadow-sm);
   position: sticky;
   top: 0;
   z-index: 100;
+  background: rgba(14, 14, 14, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--muted);
 }
 
 .header-inner {
-  max-width: 1280px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 16px 24px;
+  padding: 22px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -18,34 +19,29 @@
 
 .header-brand {
   display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.header-logo {
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
+  align-items: baseline;
+  gap: 20px;
 }
 
 .header-title {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--blue);
-  letter-spacing: -0.5px;
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--cream);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
 }
 
 .header-tagline {
-  font-size: 0.875rem;
-  color: var(--gray-400);
-  font-weight: 500;
-  border-left: 2px solid var(--gray-200);
-  padding-left: 12px;
-  margin-left: 4px;
+  font-size: 0.6rem;
+  color: var(--muted-light);
+  font-weight: 300;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
 }
 
-@media (max-width: 480px) {
-  .header-tagline {
-    display: none;
-  }
+@media (max-width: 600px) {
+  .header-inner { padding: 18px 20px; }
+  .header-tagline { display: none; }
+  .header-title { font-size: 1.3rem; }
 }
